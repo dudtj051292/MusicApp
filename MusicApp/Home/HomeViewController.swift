@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +18,15 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionViewCell", for: indexPath) as? TrackCollectionViewCell else{
+            return UICollectionViewCell()
+
+        }
+        return cell
     }
     
     //Header View
@@ -40,12 +44,16 @@ extension HomeViewController: UICollectionViewDataSource{
 
 extension HomeViewController : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        
     }
 }
 
 extension HomeViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.zero
+        let itemSpacing : CGFloat = 20
+        let margin : CGFloat = 20
+        let width =  (collectionView.bounds.width - itemSpacing - margin*2)/2
+        let height = width+60
+        return CGSize(width: width, height: height)
     }
 }
