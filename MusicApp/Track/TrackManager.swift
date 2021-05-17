@@ -46,7 +46,7 @@ class TrackManager{
         let track = playerItem.convertToTrack()
         return track
     }
-    // 가져온 트랙을 가지고 앨범이름으로 뭉쳐모여서
+    // 가져온 트랙을 가지고 앨범이름으로 뭉쳐모여서 앨범을 리턴해준다
     func loadAlbums(tracks : [AVPlayerItem]) -> [Album] {
         let trackList : [Track] = tracks.compactMap{$0.convertToTrack()}
         let albumDics = Dictionary(grouping: trackList, by : {(track) in track.albumName})
