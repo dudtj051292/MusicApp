@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g5t-ba-o70">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UWt-Jy-M2O">
+                                    <size key="itemSize" width="180" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrackCollectionViewCell" id="wJ6-Qh-Hzr" customClass="TrackCollectionViewCell" customModule="MusicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Nz-t9-8uu">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgl-eL-m2B">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="bgl-eL-m2B" secondAttribute="height" multiplier="1:1" id="5Pf-WG-WWb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzf-2m-F7x">
+                                                    <rect key="frame" x="6" y="186.5" width="160" height="23.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="sri-nf-4b0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiO-fY-LPy">
+                                                    <rect key="frame" x="5" y="208" width="160" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="5JG-yp-1zE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="15"/>
+                                                    <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bgl-eL-m2B" firstAttribute="top" secondItem="1Nz-t9-8uu" secondAttribute="top" id="1QN-hs-Cj1"/>
+                                                <constraint firstItem="lzf-2m-F7x" firstAttribute="bottom" secondItem="bgl-eL-m2B" secondAttribute="bottom" constant="30" id="7cC-RN-fuy"/>
+                                                <constraint firstItem="bgl-eL-m2B" firstAttribute="centerX" secondItem="1Nz-t9-8uu" secondAttribute="centerX" id="NSJ-cd-arX"/>
+                                                <constraint firstItem="FiO-fY-LPy" firstAttribute="top" secondItem="lzf-2m-F7x" secondAttribute="bottom" constant="-2" id="P19-xZ-bhm"/>
+                                                <constraint firstItem="FiO-fY-LPy" firstAttribute="leading" secondItem="1Nz-t9-8uu" secondAttribute="leading" constant="4" id="T5Y-Te-LP9"/>
+                                                <constraint firstItem="lzf-2m-F7x" firstAttribute="leading" secondItem="1Nz-t9-8uu" secondAttribute="leading" constant="6" id="XVE-aV-JPV"/>
+                                                <constraint firstItem="bgl-eL-m2B" firstAttribute="leading" secondItem="1Nz-t9-8uu" secondAttribute="leading" id="kyx-ak-pvF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackArtist" destination="FiO-fY-LPy" id="Vhh-Tt-rg0"/>
+                                            <outlet property="trackThumnail" destination="bgl-eL-m2B" id="be5-AO-SWI"/>
+                                            <outlet property="trackTitle" destination="lzf-2m-F7x" id="scv-a4-IJA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nL3-Md-nxB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Uqk-jv-KIW"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g5t-ba-o70" secondAttribute="bottom" id="9a2-af-VRt"/>
+                            <constraint firstItem="g5t-ba-o70" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z6K-V4-X9O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g5t-ba-o70" secondAttribute="trailing" id="ecJ-jy-TsP"/>
+                            <constraint firstItem="g5t-ba-o70" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nUq-ei-cvU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
