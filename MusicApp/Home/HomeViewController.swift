@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController  {
 
+    let trackManager : TrackManager = TrackManager()
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,7 +19,7 @@ class HomeViewController: UIViewController  {
 
 extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return trackManager.tracks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,6 +27,9 @@ extension HomeViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
 
         }
+        
+        let track = trackManager.track(at: indexPath.item)
+        cell.updateUI(item: track)
         return cell
     }
     
@@ -33,7 +37,26 @@ extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            return UICollectionReusableView()
+            guard let item = trackManager.todayRecoomand else {
+                return UICollectionReusableView()
+            }
+            print("1")
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath)as?
+                    TrackCollectionHeaderView else{
+                return UICollectionReusableView()
+            }
+            print("2")
+//
+//            guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath) as?
+//                    TrackCollectionHeaderView else{
+//                return UICollectionReusableView()
+//            }
+            header.update(with: item)
+            header.tapHandler = {item -> Void in
+                //Player를 띄운다
+                print("--> item \(item.convertToTrack()?.title)")
+            }
+            return header
         default:
             return UICollectionReusableView()
         }
