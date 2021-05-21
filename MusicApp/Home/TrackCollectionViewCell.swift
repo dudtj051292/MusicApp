@@ -18,5 +18,12 @@ class TrackCollectionViewCell: UICollectionViewCell {
         trackThumnail.layer.cornerRadius = 4
         trackArtist.textColor = UIColor.systemGray2
     }
-    
+    func updateUI(item : Track?){
+        guard let track = item else{
+            return
+        }
+        trackThumnail.image = track.artwork
+        trackTitle.text = track.title
+        trackArtist.text = track.artist
+    }
 }

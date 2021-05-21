@@ -43,6 +43,7 @@
 		D3EFF5F72652C1CC00321DD3 /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5F62652C1CC00321DD3 /* SimplePlayer.swift */; };
 		D3EFF5F92652C25500321DD3 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5F82652C25500321DD3 /* Track.swift */; };
 		D3EFF5FB2652C62100321DD3 /* Extension+AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5FA2652C62100321DD3 /* Extension+AVPlayerItem.swift */; };
+		D3EFF5FD2657FBFD00321DD3 /* TrackCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5FC2657FBFD00321DD3 /* TrackCollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		D3EFF5F62652C1CC00321DD3 /* SimplePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayer.swift; sourceTree = "<group>"; };
 		D3EFF5F82652C25500321DD3 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		D3EFF5FA2652C62100321DD3 /* Extension+AVPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+AVPlayerItem.swift"; sourceTree = "<group>"; };
+		D3EFF5FC2657FBFD00321DD3 /* TrackCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				D3EFF5662652AF3B00321DD3 /* Main.storyboard */,
 				D3EFF5922652B5C100321DD3 /* HomeViewController.swift */,
 				D3EFF5902652B42300321DD3 /* TrackCollectionViewCell.swift */,
+				D3EFF5FC2657FBFD00321DD3 /* TrackCollectionHeaderView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				D3EFF5632652AF3B00321DD3 /* SceneDelegate.swift in Sources */,
 				D3EFF5C72652BB5400321DD3 /* PalyuerViewController.swift in Sources */,
 				D3EFF5932652B5C100321DD3 /* HomeViewController.swift in Sources */,
+				D3EFF5FD2657FBFD00321DD3 /* TrackCollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
