@@ -40,21 +40,24 @@ extension HomeViewController: UICollectionViewDataSource{
             guard let item = trackManager.todayRecoomand else {
                 return UICollectionReusableView()
             }
-            print("1")
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath)as?
                     TrackCollectionHeaderView else{
                 return UICollectionReusableView()
             }
-            print("2")
-//
-//            guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath) as?
-//                    TrackCollectionHeaderView else{
-//                return UICollectionReusableView()
-//            }
+            
             header.update(with: item)
-            header.tapHandler = {item -> Void in
+            print("1")
+            header.tapHandler = {item in
                 //Player를 띄운다
-                print("--> item \(item.convertToTrack()?.title)")
+                let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+                guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as?
+                        PlayerViewController else {return}
+                playerVC.simplePlayer.replaceCurrentItem(with: item)
+                self.present(playerVC, animated: true, completion: nil)
+                print("2")
+
+                
+//                print("--> item \(item.convertToTrack()?.title)")
             }
             return header
         default:
@@ -66,9 +69,22 @@ extension HomeViewController: UICollectionViewDataSource{
 
 
 extension HomeViewController : UICollectionViewDelegate{
+    // 클릭했을때 어떻게 할까?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+        guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
+        let item = trackManager.tracks[indexPath.item]
+        playerVC.simplePlayer.replaceCurrentItem(with: item)
+        present(playerVC, animated: true, completion: nil)
     }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+//        guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as?
+//                PlayerViewController else {return}
+//        let item = trackManager.tracks[indexPath.item]
+//        playerVC.simplepPlayer.replaceCurrentItem(with: item)
+//        present(playerVC, animated: true, completion: nil)
+//    }
 }
 
 extension HomeViewController : UICollectionViewDelegateFlowLayout{
