@@ -19,6 +19,7 @@ class TrackManager{
         let tracks = loadTracks()
         self.tracks = tracks
         self.albums = loadAlbums(tracks: tracks)
+        loadOtherTodaysTrack()
     }
     
     func loadTracks() -> [AVPlayerItem]{

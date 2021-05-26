@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3118718265E865600FD5364 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3118717265E865600FD5364 /* Player.storyboard */; };
+		D311871A265E869800FD5364 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3118719265E869800FD5364 /* PlayerViewController.swift */; };
 		D3EFF5612652AF3B00321DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5602652AF3B00321DD3 /* AppDelegate.swift */; };
 		D3EFF5632652AF3B00321DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5622652AF3B00321DD3 /* SceneDelegate.swift */; };
 		D3EFF5682652AF3B00321DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EFF5662652AF3B00321DD3 /* Main.storyboard */; };
@@ -16,7 +18,6 @@
 		D3EFF5832652AF3D00321DD3 /* MusicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5822652AF3D00321DD3 /* MusicAppUITests.swift */; };
 		D3EFF5912652B42300321DD3 /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5902652B42300321DD3 /* TrackCollectionViewCell.swift */; };
 		D3EFF5932652B5C100321DD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5922652B5C100321DD3 /* HomeViewController.swift */; };
-		D3EFF5C72652BB5400321DD3 /* PalyuerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5C62652BB5400321DD3 /* PalyuerViewController.swift */; };
 		D3EFF5DE2652BD5B00321DD3 /* tranquility.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3EFF5C82652BD5B00321DD3 /* tranquility.mp3 */; };
 		D3EFF5DF2652BD5B00321DD3 /* aruarian dance [lounge version].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3EFF5C92652BD5B00321DD3 /* aruarian dance [lounge version].mp3 */; };
 		D3EFF5E02652BD5B00321DD3 /* Chamomile Tea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3EFF5CA2652BD5B00321DD3 /* Chamomile Tea.mp3 */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3118717265E865600FD5364 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
+		D3118719265E869800FD5364 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		D3EFF55D2652AF3B00321DD3 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EFF5602652AF3B00321DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3EFF5622652AF3B00321DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +82,6 @@
 		D3EFF5842652AF3D00321DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EFF5902652B42300321DD3 /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3EFF5922652B5C100321DD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D3EFF5C62652BB5400321DD3 /* PalyuerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalyuerViewController.swift; sourceTree = "<group>"; };
 		D3EFF5C82652BD5B00321DD3 /* tranquility.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tranquility.mp3; sourceTree = "<group>"; };
 		D3EFF5C92652BD5B00321DD3 /* aruarian dance [lounge version].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "aruarian dance [lounge version].mp3"; sourceTree = "<group>"; };
 		D3EFF5CA2652BD5B00321DD3 /* Chamomile Tea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chamomile Tea.mp3"; sourceTree = "<group>"; };
@@ -233,7 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				D3EFF5F62652C1CC00321DD3 /* SimplePlayer.swift */,
-				D3EFF5C62652BB5400321DD3 /* PalyuerViewController.swift */,
+				D3118719265E869800FD5364 /* PlayerViewController.swift */,
+				D3118717265E865600FD5364 /* Player.storyboard */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				D3EFF5E32652BD5B00321DD3 /* Bike Rides On The Block.mp3 in Resources */,
 				D3EFF5EE2652BD5B00321DD3 /* Missing U In The Raining Day.mp3 in Resources */,
 				D3EFF5ED2652BD5B00321DD3 /* distant moon (spotify apple etc).mp3 in Resources */,
+				D3118718265E865600FD5364 /* Player.storyboard in Resources */,
 				D3EFF5EC2652BD5B00321DD3 /* Sampled in your own sweet way.mp3 in Resources */,
 				D3EFF5EA2652BD5B00321DD3 /* Ocean ride __ 海の乗り.mp3 in Resources */,
 				D3EFF56D2652AF3D00321DD3 /* LaunchScreen.storyboard in Resources */,
@@ -414,9 +418,9 @@
 				D3EFF5FB2652C62100321DD3 /* Extension+AVPlayerItem.swift in Sources */,
 				D3EFF5612652AF3B00321DD3 /* AppDelegate.swift in Sources */,
 				D3EFF5632652AF3B00321DD3 /* SceneDelegate.swift in Sources */,
-				D3EFF5C72652BB5400321DD3 /* PalyuerViewController.swift in Sources */,
 				D3EFF5932652B5C100321DD3 /* HomeViewController.swift in Sources */,
 				D3EFF5FD2657FBFD00321DD3 /* TrackCollectionHeaderView.swift in Sources */,
+				D311871A265E869800FD5364 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
