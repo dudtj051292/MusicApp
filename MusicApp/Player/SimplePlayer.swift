@@ -10,20 +10,26 @@ import AVFoundation
 
 class SimplePlayer {
     
-    private let playuer = AVPlayer()
+    static let shared = SimplePlayer()
+    
+    private let player = AVPlayer()
     
     var currentTime : Double {
-        return 0.0
+        return player.currentItem?.currentTime().seconds ?? 0.0
+//        return 0.0
     }
     var totalDuration : Double {
-        return 0.0
+        return player.currentItem?.duration.seconds ?? 0.0
+//        return 0.0
     }
     var isPlaying : Bool {
-        return false
+        return player.isPlaying
+//        return false
     }
     
     var currentItem : AVPlayerItem?{
-        return nil
+        return player.currentItem
+//        return nil
     }
     
     init() {
@@ -31,10 +37,19 @@ class SimplePlayer {
     }
     
     func pause(){
-        
+        player.pause()
     }
     func play(){
-        
+        player.play()
+    }
+    func seek(to time : CMTime){
+        player.seek(to: time)
+    }
+    func replaceCurrentItem(with item : AVPlayerItem?){
+        player.replaceCurrentItem(with: item)
+    }
+    func addPerioidicTimeObserver(forInterval : CMTime, queue : DispatchQueue? , using : @escaping (CMTime) -> Void ) {
+        player.addPeriodicTimeObserver(forInterval : forInterval, queue: queue, using :using)
     }
     
     

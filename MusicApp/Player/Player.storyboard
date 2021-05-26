@@ -37,6 +37,11 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kkB-m9-TUu">
                                 <rect key="frame" x="38" y="656" width="358" height="30"/>
+                                <connections>
+                                    <action selector="beginDrag:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="QGf-Kt-wzI"/>
+                                    <action selector="endDrag:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="p2X-9y-l3U"/>
+                                    <action selector="seek:" destination="Y6W-OH-hqX" eventType="valueChanged" id="LXe-k7-MAH"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFU-Fo-DFL">
                                 <rect key="frame" x="31" y="719" width="37" height="16"/>
@@ -53,6 +58,9 @@
                                 <state key="normal" title="Button" image="play.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                 </state>
+                                <connections>
+                                    <action selector="togglePlayButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5w6-JO-fUL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjs-Ov-vg6">
                                 <rect key="frame" x="348" y="719" width="37" height="16"/>
@@ -84,9 +92,9 @@
                     <connections>
                         <outlet property="artistLabel" destination="KIm-Qb-2r4" id="JHx-4p-jq0"/>
                         <outlet property="currentTimeLabel" destination="xFU-Fo-DFL" id="EoE-gZ-UPE"/>
-                        <outlet property="palyControlButon" destination="kkB-m9-TUu" id="VBf-GR-F2i"/>
-                        <outlet property="playControlButton" destination="ACX-cn-13O" id="9Hs-bI-pTW"/>
+                        <outlet property="playControlButton" destination="ACX-cn-13O" id="kr7-jx-5Fn"/>
                         <outlet property="thumbnailImageView" destination="dB1-mV-q85" id="vo8-vs-9Xz"/>
+                        <outlet property="timeSlider" destination="kkB-m9-TUu" id="oG5-tF-mFk"/>
                         <outlet property="titleLabel" destination="EvR-AE-GsN" id="kEU-u7-H8f"/>
                         <outlet property="totalDurationLabel" destination="Tjs-Ov-vg6" id="IL5-AB-NMU"/>
                     </connections>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D3118718265E865600FD5364 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3118717265E865600FD5364 /* Player.storyboard */; };
 		D311871A265E869800FD5364 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3118719265E869800FD5364 /* PlayerViewController.swift */; };
+		D311871C265E99AF00FD5364 /* DefaultStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311871B265E99AF00FD5364 /* DefaultStyle.swift */; };
 		D3EFF5612652AF3B00321DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5602652AF3B00321DD3 /* AppDelegate.swift */; };
 		D3EFF5632652AF3B00321DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EFF5622652AF3B00321DD3 /* SceneDelegate.swift */; };
 		D3EFF5682652AF3B00321DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EFF5662652AF3B00321DD3 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		D3118717265E865600FD5364 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		D3118719265E869800FD5364 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		D311871B265E99AF00FD5364 /* DefaultStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyle.swift; sourceTree = "<group>"; };
 		D3EFF55D2652AF3B00321DD3 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EFF5602652AF3B00321DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3EFF5622652AF3B00321DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,8 +236,8 @@
 		D3EFF5C32652BAC600321DD3 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				D3EFF5F62652C1CC00321DD3 /* SimplePlayer.swift */,
 				D3118719265E869800FD5364 /* PlayerViewController.swift */,
+				D3EFF5F62652C1CC00321DD3 /* SimplePlayer.swift */,
 				D3118717265E865600FD5364 /* Player.storyboard */,
 			);
 			path = Player;
@@ -254,6 +256,7 @@
 		D3EFF5C52652BADD00321DD3 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				D311871B265E99AF00FD5364 /* DefaultStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			files = (
 				D3EFF5912652B42300321DD3 /* TrackCollectionViewCell.swift in Sources */,
 				D3EFF5F72652C1CC00321DD3 /* SimplePlayer.swift in Sources */,
+				D311871C265E99AF00FD5364 /* DefaultStyle.swift in Sources */,
 				D3EFF5F52652C13F00321DD3 /* TrackManager.swift in Sources */,
 				D3EFF5F92652C25500321DD3 /* Track.swift in Sources */,
 				D3EFF5FB2652C62100321DD3 /* Extension+AVPlayerItem.swift in Sources */,
