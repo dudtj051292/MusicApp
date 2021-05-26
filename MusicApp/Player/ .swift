@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PalyuerViewController: UIViewController {
+class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
